@@ -20,6 +20,9 @@ module CeiEventsApi
     config.x.whatsapp.api_url = ENV['WHATSAPP_API_URL']
     config.x.whatsapp.api_key = ENV['WHATSAPP_API_KEY']
 
+    # Configuração para preservar o fuso horário no método `to_time`
+    config.active_support.to_time_preserves_timezone = :zone
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

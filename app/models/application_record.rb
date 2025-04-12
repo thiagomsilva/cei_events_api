@@ -4,6 +4,9 @@ end
 
 # Serviço para geração de comprovantes de inscrição
 class CertificateGenerator
+  # Desativando o aviso sobre fontes no Prawn
+  Prawn::Fonts::AFM.hide_m17n_warning = true
+
   def self.generate(event, user)
     Prawn::Document.new do |pdf|
       pdf.text "Comprovante de Inscrição", size: 20, style: :bold

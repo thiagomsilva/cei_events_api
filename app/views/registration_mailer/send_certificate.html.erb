@@ -1,0 +1,6 @@
+<h1>Comprovante de Inscrição</h1>
+<p>Olá, <%= @user.name %>!</p>
+<p>Você se inscreveu no evento: <strong><%= @event.name %></strong>.</p>
+<p>Data do evento: <%= @event.date.strftime('%d/%m/%Y') %></p>
+<p>Local: <%= @event.location %></p>
+<p>Obrigado por participar!</p>
